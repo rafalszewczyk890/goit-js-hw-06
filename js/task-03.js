@@ -23,10 +23,10 @@ list.insertAdjacentHTML("beforeend", photos);
 
 // Adding styles
 
-list.classList.add("list");
+list.classList.add("list-task03");
 
 const grid = document.querySelectorAll("img");
 
-grid.forEach((elem) => elem.classList.add("image"));
+grid.forEach((elem) => elem.classList.add("image-task03"));
 
 console.log(grid.classList);
