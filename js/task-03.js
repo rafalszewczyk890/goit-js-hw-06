@@ -16,7 +16,7 @@ const images = [
 const list = document.querySelector("ul");
 
 const photos = images
-  .map((image) => `<li><img src=${image.url} alt=${image.alt}></img></li>`)
+  .map((image) => `<li><img src=${image.url} alt="${image.alt}"></img></li>`)
   .join("");
 
 list.insertAdjacentHTML("beforeend", photos);
