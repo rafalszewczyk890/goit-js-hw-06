@@ -8,8 +8,8 @@ loginForm.addEventListener("submit", (event) => {
     alert("All fields must be filled in");
   }
   const dataLog = {
-    email: event.target[0].value,
-    password: event.target[1].value,
+    [event.target[0].name]: event.target[0].value,
+    [event.target[1].name]: event.target[1].value,
   };
   console.log(dataLog);
   event.target.reset();
