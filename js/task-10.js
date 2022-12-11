@@ -12,7 +12,7 @@ const createButton = document.querySelector("button[data-create]");
 
 const destroyButton = document.querySelector("button[data-destroy]");
 
-createButton.addEventListener("click", (e) => {
+createButton.addEventListener("click", () => {
   const boxNumber = inputElem.value;
   for (let i = 0; i < boxNumber; i += 1) {
     const increase = 10 * i;
@@ -25,6 +25,6 @@ createButton.addEventListener("click", (e) => {
   }
 });
 
-destroyButton.addEventListener("click", (e) => {
+destroyButton.addEventListener("click", () => {
   boxesDiv.innerHTML = "";
 });
