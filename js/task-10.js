@@ -12,19 +12,20 @@ const createButton = document.querySelector("button[data-create]");
 
 const destroyButton = document.querySelector("button[data-destroy]");
 
+let boxSize = 30;
+
 createButton.addEventListener("click", () => {
   const boxNumber = inputElem.value;
   for (let i = 0; i < boxNumber; i += 1) {
-    const increase = 10 * i;
     boxesDiv.insertAdjacentHTML(
       "afterbegin",
-      `<div style="background-color: ${getRandomHexColor()}; height: ${
-        30 + increase
-      }px; width: ${30 + increase}px"></div>`
+      `<div style="background-color: ${getRandomHexColor()}; height: ${boxSize}px; width: ${boxSize}px"></div>`
     );
+    boxSize += 10;
   }
 });
 
 destroyButton.addEventListener("click", () => {
   boxesDiv.innerHTML = "";
+  boxSize = 30;
 });
