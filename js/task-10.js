@@ -18,7 +18,7 @@ createButton.addEventListener("click", () => {
   const boxNumber = inputElem.value;
   for (let i = 0; i < boxNumber; i += 1) {
     boxesDiv.insertAdjacentHTML(
-      "afterbegin",
+      "beforeend",
       `<div style="background-color: ${getRandomHexColor()}; height: ${boxSize}px; width: ${boxSize}px"></div>`
     );
     boxSize += 10;
