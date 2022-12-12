@@ -14,7 +14,7 @@ const destroyButton = document.querySelector("button[data-destroy]");
 
 let boxSize = 30;
 
-createButton.addEventListener("click", () => {
+const createBox = () => {
   const boxNumber = inputElem.value;
   for (let i = 0; i < boxNumber; i += 1) {
     boxesDiv.insertAdjacentHTML(
@@ -23,9 +23,13 @@ createButton.addEventListener("click", () => {
     );
     boxSize += 10;
   }
-});
+};
 
-destroyButton.addEventListener("click", () => {
+const destroyBox = () => {
   boxesDiv.innerHTML = "";
   boxSize = 30;
-});
+};
+
+createButton.addEventListener("click", createBox);
+
+destroyButton.addEventListener("click", destroyBox);
